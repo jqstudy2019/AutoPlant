@@ -14,7 +14,7 @@ Rev A (draft) · 2026-10-18 · Scales and acceptability: `risk_management_plan.m
 | HAZ-06 | Water reaches electronics (splash, leak, condensation) | Short circuit; fire at supply | 5 | 2 | Unacc. | RC-10, RC-11 | 5 | 1 | ALARP — see note 1 |
 | HAZ-07 | Tube slips off fitting or fitting leaks | Water damage | 4 | 3 | Unacc. | RC-12, RC-03 | 3 | 2 | Acc. |
 | HAZ-08 | MOSFET, wiring or regulator overheats | Burn, fire | 5 | 2 | Unacc. | RC-11, RC-13 | 5 | 1 | ALARP — see note 1 |
-| HAZ-09 | Unauthorized remote access | Camera privacy breach; malicious pump commands | 3 | 3 | ALARP | RC-14, RC-01 | 3 | 1 | Acc. |
+| HAZ-09 | Unauthorized remote access | Camera privacy breach (live image and 90-day image archive); malicious pump commands | 3 | 3 | ALARP | RC-14, RC-01 | 3 | 1 | Acc. |
 | HAZ-10 | Loaded unit tips over on shelf | Spill, broken pot | 3 | 2 | Acc. | RC-15, RC-03 | 3 | 1 | Acc. |
 
 **Note 1 (ALARP rationale):** Severity stays 5 because fire is the worst credible outcome of any powered device. Probability is reduced to 1 by a listed 12 V adapter with its own protection, a fuse on the 12 V line, derated switching parts, and electronics placed above the water line. Further reduction (e.g. potting the electronics) would block debugging and add little, so the residual risk is accepted.

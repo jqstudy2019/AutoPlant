@@ -36,6 +36,7 @@ Each design input is a measurable requirement that traces to one or more user ne
 | DI-16 | The system shall log every sensor reading (≥ 1 per 5 min) and every pump event with a reason code, and retain logs ≥ 90 days. | UN-04 | I, T | VER-10 |
 | DI-17 | A manual water command from the dashboard shall start the pump within 5 s, subject to DI-08 and DI-09. | UN-05 | T | VER-09 |
 | DI-18 | The dashboard shall show a camera image of the planter (≥ 640 × 480) no older than 15 min. | UN-07 | T | VER-09 |
+| DI-30 | The system shall archive a planter image (≥ 640 × 480) at least once per hour and within 5 min after each watering cycle, store it only on the supervisor (no cloud upload), retain images ≥ 90 days, and let the user browse them by date on the dashboard.† | UN-04, UN-07 | I, T | VER-10 |
 
 ## Physical, safety and security
 

@@ -13,9 +13,9 @@ Design outputs are the drawings, schematics, code and specifications that satisf
 | DO-05 | Pump dose calibration (mL/s) and runtime calculation | DI-05 | `supervisor/autoplant/controller.py`, `analysis/pump_cal/` | Skeleton |
 | DO-06 | Firmware pump task with hard runtime limit and reservoir interlock | DI-08, DI-09 | `firmware/src/pump.cpp` | Skeleton |
 | DO-07 | Firmware link-loss watchdog | DI-11 | `firmware/src/main.cpp` | Skeleton |
-| DO-08 | Pump circuit schematic with independent series cutoff, fuse and derated MOSFET selection | DI-12, DI-19, DI-29 | `mechanical/drawings/schematic.pdf` | Planned |
-| DO-09 | Flask dashboard + alerting | DI-14, DI-15, DI-17, DI-18 | `supervisor/autoplant/dashboard.py` | Skeleton |
-| DO-10 | Data logger | DI-16 | `supervisor/autoplant/datalog.py` | Skeleton |
+| DO-08 | Node wiring schematic (I2C bus, float switch input, 12 V / 5 V power, pump circuit with independent series cutoff, fuse and derated MOSFET selection) | DI-12, DI-19, DI-29 | `mechanical/drawings/schematic.pdf` | Planned |
+| DO-09 | Flask dashboard + alerting + image history view | DI-14, DI-15, DI-17, DI-18, DI-30 | `supervisor/autoplant/dashboard.py` | Skeleton |
+| DO-10 | Data logger + image archive | DI-16, DI-30 | `supervisor/autoplant/datalog.py` | Skeleton (images planned) |
 | DO-11 | Enclosure, reservoir lid, stand and drip tray drawings (GD&T) | DI-20, DI-24, DI-27, DI-28 | `mechanical/drawings/` | Planned |
 | DO-12 | Fluid path spec (tubing, fittings, routing) | DI-21 | `mechanical/drawings/` | Planned |
 | DO-13 | Reservoir volume analysis | DI-22 | `analysis/reservoir_sizing.md` | Planned |

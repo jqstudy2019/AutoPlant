@@ -28,3 +28,4 @@ DI-26,"The dashboard shall be reachable only from the LAN and the tailnet, with 
 DI-27,Footprint ≤ 300 × 200 mm; height ≤ 350 mm excluding the plant; the loaded unit shall not tip when tilted 10°.,UN-12; UN-06,DO-11,VER-14,RC-15,HAZ-10
 DI-28,A drip tray under the planter and reservoir shall contain ≥ 500 mL.†,UN-06,DO-11,VER-14,RC-03,HAZ-01; HAZ-02; HAZ-03; HAZ-07; HAZ-10
 DI-29,Pump switching components shall operate at ≤ 50 % of rated current and stay below 60 °C case temperature during a 30 s run.,UN-06,DO-08,VER-06,RC-13,HAZ-08
+DI-30,"The system shall archive a planter image (≥ 640 × 480) at least once per hour and within 5 min after each watering cycle, store it only on the supervisor (no cloud upload), retain images ≥ 90 days, and let the user browse them by date on the dashboard.†",UN-04; UN-07,DO-09; DO-10,VER-10,,

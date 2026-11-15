@@ -1,0 +1,22 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  supervisor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install supervisor
+        run: pip install -e "./supervisor[dev]"
+      - name: Run pytest
+        run: pytest tests -v
+      - name: Check traceability
+        run: |
+          python tools/check_trace.py
+          git diff --exit-code docs/dhf/traceability_matrix.csv

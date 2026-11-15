@@ -1,0 +1,19 @@
+Item,Qty,Est. unit cost USD (low),Est. unit cost USD (high),Status,Notes,Drives
+Raspberry Pi 4 or 5,1,0,90,Owned?,Supervisor,DO-04; DO-09
+microSD 32 GB,1,8,15,Check,,
+ESP32-CAM (AI-Thinker) + USB programmer,1,0,15,Owned,Planter node; spares available for second module,DO-06
+Adafruit STEMMA I2C capacitive soil sensor (seesaw),1,8,12,To buy,I2C 0x36,DO-01
+BME280 breakout (3.3 V),1,5,12,To buy,I2C 0x76,DO-02
+Horizontal PP side-mount float switch,1,5,11,To buy,Wire fail-safe (open = low water),DO-03
+12 V mini submersible pump,1,9,16,To buy,Measure current before choosing fuse,DO-05
+Logic-level N-MOSFET (e.g. IRLZ44N or AO3400 module),2,1,4,To buy,Primary + series cutoff (RC-04); derate to <=50% current,DO-08
+Flyback diode (1N5819 or similar),1,0.3,1,To buy,Across pump,DO-08
+10 kOhm resistors (gate pull-downs),4,0.1,0.5,To buy,GPIO 2 and 12 must be LOW at boot,DO-08
+Inline fuse holder + fuse,1,2,5,To buy,Size from measured pump current (RC-11),DO-08
+12 V 2 A listed AC adapter,1,8,15,To buy,UL/ETL listed (DI-19),DO-08
+12 V to 5 V buck converter,1,3,8,To buy,ESP32-CAM supply,
+Silicone tubing + barbed fittings + clamps,1,6,12,To buy,RC-12,DO-12
+Reservoir container (>= 2 L),1,5,15,To buy,Opening >= 50 mm (DI-24),DO-13
+Drip tray (>= 500 mL),1,3,10,To buy or print,RC-03,DO-11
+Perfboard + headers + wire,1,6,12,To buy,,
+3D printing filament (PETG),0.3 kg,6,10,Owned?,Enclosure and mounts,DO-11

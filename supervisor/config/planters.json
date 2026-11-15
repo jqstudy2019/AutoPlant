@@ -1,0 +1,16 @@
+{
+  "planters": [
+    {
+      "id": 1,
+      "name": "Planter 1",
+      "node_host": "autoplant-node-1.local",
+      "enabled": true,
+      "dry_threshold_pct": 35,
+      "wet_threshold_pct": 42,
+      "dose_ml": 50,
+      "pump_flow_ml_per_s": 5.0,
+      "cooldown_h": 6,
+      "max_cycles_per_24h": 2
+    }
+  ]
+}

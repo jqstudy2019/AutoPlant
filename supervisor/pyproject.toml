@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autoplant"
+version = "0.1.0"
+description = "AutoPlant supervisor: watering control logic, logging and dashboard"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dashboard = ["flask>=3.0"]
+dev = ["pytest>=8"]
+
+[tool.setuptools]
+packages = ["autoplant"]
+
+[tool.pytest.ini_options]
+markers = ["ver(id): links a test to a verification protocol in docs/dhf/04_verification"]

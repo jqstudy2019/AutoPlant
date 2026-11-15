@@ -1,0 +1,17 @@
+Item,Function,Failure mode,Effect,S,Cause,O,Current controls (prevention / detection),D,RPN,Recommended action,Linked HAZ,Linked RC
+Soil sensor,Report moisture index,Reads falsely dry,Repeated watering; overflow,8,Probe pulled out of soil; cable disconnected; I2C bus error,5,Plausibility check; no-response detection / dashboard trend,4,160,Add strain relief and probe depth stop to mount drawing,HAZ-03,RC-05; RC-06
+Soil sensor,Report moisture index,Reads falsely wet,Plant not watered,6,Soil compaction around probe; calibration drift,4,Calibration (VER-01) / 7-day trend on dashboard,5,120,Recalibration reminder every 90 days; compare with photo,HAZ-04,RC-08
+Soil sensor,Report moisture index,No data,Auto watering inhibited,4,Sensor failure; I2C address conflict,3,I2C scan at boot / fault alert,2,24,None,HAZ-04,RC-08
+Float switch,Detect reservoir low,Stuck high (reports OK when low),Pump runs dry; no refill alert,6,Float jammed by debris or biofilm,3,Side-mount PP float / none,7,126,Add water-volume estimate from pump runtime as second check,HAZ-05; HAZ-04,RC-09
+Float switch,Detect reservoir low,Stuck low (reports low when full),Watering inhibited; false alert,3,Wiring open circuit with pull-up wiring,3,Alert shown / user sees full tank,2,18,Wire so open circuit reads LOW (fail-safe),HAZ-04,RC-07
+Pump MOSFET,Switch pump on/off,Fails shorted,Pump runs continuously,8,Overcurrent; ESD; flyback diode missing,2,Flyback diode; derating / none,8,128,Add independent series cutoff (RC-04),HAZ-02,RC-04
+Pump MOSFET,Switch pump on/off,Fails open,No watering,6,Gate drive below threshold; damage,3,Logic-level MOSFET / no-response detection,3,54,None,HAZ-04,RC-06
+Pump,Deliver water,Flow drops (clog; wear),Under-dose,5,Debris; air lock,4,Intake filter / no-response detection,4,80,Add intake mesh; check dose in VER-05,HAZ-04,RC-06
+Pump,Deliver water,Runs dry,Pump overheats,4,Reservoir empty with float failure,2,Float interlock / none,6,48,See float action,HAZ-05,RC-09
+Firmware pump task,Limit runtime,Limit not enforced,Overflow,8,Software defect; task starvation,3,Hardware-timer based limit / unit test + VER-06,3,72,Implement limit with hardware timer independent of FreeRTOS scheduler,HAZ-01,RC-01
+Firmware link watchdog,Fail-off on link loss,Pump left on after Wi-Fi drop,Overflow,8,Command arrives then link drops,3,Pump commands carry duration; firmware limit / VER-07,3,72,None beyond RC-01,HAZ-01,RC-01; RC-08
+Supervisor controller,Decide when to water,Waters too often,Overwatering,7,Threshold misconfigured; clock error,3,Config validation; cycle limit; cooldown / pytest suite,2,42,Reject configs where wet <= dry threshold,HAZ-01; HAZ-03,RC-02
+Tubing and fittings,Carry water to planter,Tube slips off,Water released outside pot,8,No clamp; tube pulled,4,Barbed fitting / daily inspection during VER-12,5,160,Use clamps and retention clips; drip tray,HAZ-07,RC-12; RC-03
+Electronics enclosure,Protect electronics,Water ingress,Short circuit,9,Splash during refill; mounted below water line,3,Mounted above water line / splash test,4,108,Drip edge on lid; cable entries from below,HAZ-06,RC-10
+Power supply chain,Supply 12 V / 5 V,Overheat,Fire risk,9,Short downstream; undersized wiring,2,Listed adapter; fuse / thermal check,4,72,Size fuse from measured pump current,HAZ-08,RC-11; RC-13
+Dashboard / network,Remote monitoring and control,Unauthorized access,Privacy breach; malicious commands,6,Open port; weak password,3,Tailscale only; login / port scan VER-16,3,54,None,HAZ-09,RC-14

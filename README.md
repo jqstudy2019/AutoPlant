@@ -40,11 +40,6 @@ Each additional planter = one more ESP32-CAM node with the same firmware and a n
 | `analysis/` | Calibration data and notebooks |
 | `tests/` | pytest suite for the supervisor |
 
-## Background and roadmap
-
-- `docs/concept_decisions.md` — how the design moved from the first concept (2 plants, separate WROOM-32 driver node, ROS 2 first) to v1, and why
-- `docs/phase2_ros2.md` — the planned ROS 2 Jazzy node graph and topics
-
 ## Quick start (supervisor, no hardware)
 
 ```bash
@@ -58,3 +53,8 @@ python -m autoplant.sim        # runs the control loop against a simulated plant
 ## Traceability ID scheme
 
 `UN-xx` user needs · `DI-xx` design inputs · `DO-xx` design outputs · `VER-xx` verification · `VAL-xx` validation · `HAZ-xx` hazards · `RC-xx` risk controls. The master map is `docs/dhf/traceability_matrix.csv`; `tools/check_trace.py` verifies every ID resolves.
+
+## Design history and future work
+
+- [docs/concept_decisions.md](docs/concept_decisions.md): how the design moved from the first concept (2 plants, separate WROOM-32 driver node, ROS 2 first) to v1, and why
+- Future work, outside v1 scope: [ROS 2 Jazzy integration](docs/phase2_ros2.md) and additional planter modules

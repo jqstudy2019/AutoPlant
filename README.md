@@ -6,13 +6,13 @@ A single-planter automated watering system built as a **design-control case stud
 
 ## Status
 
-| Phase  State |
+| Phase | State | Evidence |
 |---|---|---|
-| 1. Define (user needs, design inputs, risk) | In progress |
-| 2. Design (CAD, GD&T, stack-up, FEA, DFM) | Not started |
-| 3. Build (bring-up, firmware, supervisor)  | Skeleton code only |
-| 4. Verify & validate | Not started |
-| 5. Package | Not started |
+| 1. Define (user needs, design inputs, risk) | In progress: documents drafted (Rev A); DR-0 pre-review held 2026-10-18, 9 findings open | [User needs](docs/dhf/01_user_needs.md) · [Design inputs](docs/dhf/02_design_inputs.md) · [Verification plan](docs/dhf/04_verification/verification_plan.md) · [Hazard analysis](docs/dhf/06_risk/hazard_analysis.md) · [dFMEA](docs/dhf/06_risk/dfmea.csv) · [DR-0](docs/dhf/07_design_reviews/DR-0_design_input_review.md) |
+| 2. Design (CAD, GD&T, stack-up, FEA, DFM) | Not started | — |
+| 3. Build (bring-up, firmware, supervisor) | Control and pump-safety logic implemented with 21 passing tests; drivers and dashboard not yet built | [tests/](tests/) · [traceability matrix](docs/dhf/traceability_matrix.csv) |
+| 4. Verify & validate | Not started | — |
+| 5. Package | Not started | — |
 
 ## Architecture (v1)
 
